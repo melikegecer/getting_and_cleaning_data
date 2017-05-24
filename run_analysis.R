@@ -1,7 +1,3 @@
-# i needed ddply to provide 5th request of assignment
-# therefore -plyr- library is need (itt has dpply)
-library(plyr)
-
 # read activities
 activities <- read.table("D:/X/Data-Science-Specialization/03-Getting-and-Cleaning-Data/DataFiles/UCI HAR Dataset/activity_labels.txt")
 activities[,2] <- as.character(activities[,2])
