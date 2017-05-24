@@ -1,14 +1,14 @@
 # read activities
-activities <- read.table("D:/X/Data-Science-Specialization/03-Getting-and-Cleaning-Data/DataFiles/UCI HAR Dataset/activity_labels.txt")
+activities <- read.table("D:/Data-Science-Specialization/03-Getting-and-Cleaning-Data/DataFiles/UCI HAR Dataset/activity_labels.txt")
 activities[,2] <- as.character(activities[,2])
 
 # read features
-features <- read.table("D:/X/Data-Science-Specialization/03-Getting-and-Cleaning-Data/DataFiles/UCI HAR Dataset/features.txt")
+features <- read.table("D:/Data-Science-Specialization/03-Getting-and-Cleaning-Data/DataFiles/UCI HAR Dataset/features.txt")
 features[,2] <- as.character(features[,2])
 
 # read X files
-xTest <- read.table("D:/X/Data-Science-Specialization/03-Getting-and-Cleaning-Data/DataFiles/UCI HAR Dataset/test/X_test.txt", stringsAsFactors = FALSE)
-xTrain <- read.table("D:/X/Data-Science-Specialization/03-Getting-and-Cleaning-Data/DataFiles/UCI HAR Dataset/train/x_train.txt", stringsAsFactors = FALSE)
+xTest <- read.table("D:/Data-Science-Specialization/03-Getting-and-Cleaning-Data/DataFiles/UCI HAR Dataset/test/X_test.txt", stringsAsFactors = FALSE)
+xTrain <- read.table("D:/Data-Science-Specialization/03-Getting-and-Cleaning-Data/DataFiles/UCI HAR Dataset/train/x_train.txt", stringsAsFactors = FALSE)
 
 # name colums as seen in features
 colnames(xTest) <- features$V2
@@ -18,8 +18,8 @@ colnames(xTrain) <- features$V2
 xCombined <- rbind(xTest, xTrain)
 
 # read Y files
-yTest <- read.table("D:/X/Data-Science-Specialization/03-Getting-and-Cleaning-Data/DataFiles/UCI HAR Dataset/test/Y_test.txt",  stringsAsFactors = FALSE)
-yTrain <- read.table("D:/X/Data-Science-Specialization/03-Getting-and-Cleaning-Data/DataFiles/UCI HAR Dataset/train/Y_train.txt",  stringsAsFactors = FALSE)
+yTest <- read.table("D:/Data-Science-Specialization/03-Getting-and-Cleaning-Data/DataFiles/UCI HAR Dataset/test/Y_test.txt",  stringsAsFactors = FALSE)
+yTrain <- read.table("D:/Data-Science-Specialization/03-Getting-and-Cleaning-Data/DataFiles/UCI HAR Dataset/train/Y_train.txt",  stringsAsFactors = FALSE)
 
 # name columns as -activity-
 colnames(yTest) <- c("activity")
@@ -29,8 +29,8 @@ colnames(yTrain) <- c("activity")
 yCombined <- rbind(yTest, yTrain)
 
 # read subject files
-subTest <- read.table("D:/X/Data-Science-Specialization/03-Getting-and-Cleaning-Data/DataFiles/UCI HAR Dataset/test/subject_test.txt",  stringsAsFactors = FALSE)
-subTrain <- read.table("D:/X/Data-Science-Specialization/03-Getting-and-Cleaning-Data/DataFiles/UCI HAR Dataset/train/subject_train.txt",  stringsAsFactors = FALSE)
+subTest <- read.table("D:/Data-Science-Specialization/03-Getting-and-Cleaning-Data/DataFiles/UCI HAR Dataset/test/subject_test.txt",  stringsAsFactors = FALSE)
+subTrain <- read.table("D:/Data-Science-Specialization/03-Getting-and-Cleaning-Data/DataFiles/UCI HAR Dataset/train/subject_train.txt",  stringsAsFactors = FALSE)
 
 # subjects numbers
 colnames(subTest) <- c("number")
